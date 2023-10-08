@@ -1,0 +1,12 @@
+version: "3"
+services:
+  ocr:
+    image: ocr_server:v1
+    networks:
+      - ocr_network
+    ports:
+      - "9898:9898"
+
+networks:
+  ocr_network:
+    driver: bridge
